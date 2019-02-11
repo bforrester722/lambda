@@ -1,0 +1,19 @@
+{
+  "name": "@spriteful/lambda",
+  "version": "1.3.2",
+  "description": "general pure function utilities",
+  "main": "lambda.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spriteful/lambda.git"
+  },
+  "author": "Spriteful Dev spritefuldev@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spriteful/lambda/issues"
+  },
+  "homepage": "https://github.com/spriteful/lambda#readme"
+}
