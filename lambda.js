@@ -1,3 +1,4 @@
+
 // partial application
 // func -> func
 const curry = func => {
@@ -141,14 +142,12 @@ const capitalize = str => {
 
 // String or Number -> String
 const currency = (num, type = 'USD') => 
-  Number(
-    Number(num).
-      toFixed(2).
-      toLocaleString(undefined, {
-        style:   'currency', 
-        currency: type
-      })
-  );
+  Number(num).
+    toFixed(2).
+    toLocaleString(undefined, {
+      style:   'currency', 
+      currency: type
+    });
 // accepts number strings or numbers
 // calculates taxes and total after taxes
 // taxRate is the tax percentage ie 8.25
