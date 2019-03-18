@@ -64,25 +64,13 @@ const trace = curry((tag, x) => {
 });
 
 // array2D -> array
-const flatten = array => {
-  return array.reduce((prev, curr) => {
-    if (Array.isArray(curr)) {
-      prev = prev.concat(curr);
-    } else {
-      prev.push(curr);
-    }
-    return prev;
-  }, []);
-};
+const flatten = (arrays, depth = 1) => arrays.flat(depth);
 
 // func, functor -> array
 const map = curry((func, array) => array.map(func));
 
 // func, array2D -> array 
-const flatmap = curry((func, array) => {
-  const flatMapWithFunc = compose(map(func), flatten);
-  return flatMapWithFunc(array);
-});
+const flatmap = curry((func, arrays) => arrays.flatMap(func));
 
 // str -> array
 const letters   = str   => str.split('');
