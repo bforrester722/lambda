@@ -163,6 +163,13 @@ const accessByPath = curry((path, obj) => {
   return keys.reduce((accum, key) => accum[key], obj);
 });
 
+// scale an input number range to an output number range as a percentage
+const scale = curry((inputMin, inputMax, outputMin, outputMax, input) => {  
+  const percent = (input - inputMin) / (inputMax - inputMin);
+  const output  = percent * (outputMax - outputMin) + outputMin;
+  return output;
+});
+
 
 export {
   accessByPath,
@@ -184,6 +191,7 @@ export {
   push,
   removeOne,
   rest,
+  scale,
   shift,
   splice,
   split,
