@@ -170,6 +170,9 @@ const scale = curry((inputMin, inputMax, outputMin, outputMax, input) => {
   return output;
 });
 
+//array -> value
+const randomPluck = array => array[Math.floor(Math.random() * array.length)];
+
 
 export {
   accessByPath,
@@ -189,6 +192,7 @@ export {
   memoize,
   pop,
   push,
+  randomPluck,
   removeOne,
   rest,
   scale,
